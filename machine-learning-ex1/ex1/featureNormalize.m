@@ -27,13 +27,21 @@ sigma = zeros(1, size(X, 2));
 %       
 
 
+% Compute the mean of the feature. (mean is usually mu, ¥ì)
+mu %already a vector (row vector)
+mu = mean(X)
+% Compute the standard deviation of the feature. (std dev is usually sigma, ¥ò)
+sigma %already a vector (row vector)
+sigma = std(X)
+% fidning m, which is the number of rows of X
+m1 = size(X, 1);  %this is the size of row space
+m2 = size(X, 2);  %this is the size of column space
+m = size(X, 1);
 
+mu_mat = ones(m, 1) * mu;
+sigma_mat = ones(m, 1) * sigma;
 
-
-
-
-
-
+X_norm = (X - mu_mat) ./ sigma_mat;
 % ============================================================
 
 end

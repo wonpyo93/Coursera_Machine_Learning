@@ -16,17 +16,14 @@ for iter = 1:num_iters
     % Hint: While debugging, it can be useful to print out the values
     %       of the cost function (computeCostMulti) and gradient here.
     %
-
-
-
-
-
-
-
-
-
-
-
+% Hypothesis(h) is a vector of X * theta.
+h = X * theta;
+% Errors(errors) is Hypothesis - y(actual result).
+errors = h - y;
+% Change in theta(delta_theta) is alpha / m,
+%  multiplied by total X * each error.
+delta_theta = alpha / m * (X' * errors);
+theta = theta - delta_theta;
     % ============================================================
 
     % Save the cost J in every iteration    

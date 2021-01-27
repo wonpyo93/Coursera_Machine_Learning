@@ -24,7 +24,7 @@ errors = h - y;
 %  multiplied by total X * each error.
 delta_theta = alpha / m * (X' * errors);
 theta = theta - delta_theta;
-computeCost(X, y, theta)
+% computeCost(X, y, theta)
     % ============================================================
 
     % Save the cost J in every iteration    
