@@ -81,7 +81,7 @@ X = [ones(m, 1) X];
 
 fprintf('Running gradient descent ...\n');
 
-% Choose some alpha value
+% Choose some alpha value 
 alpha = 0.01; %learning rate
 alpha = 0.1;  %changing the learning rate
 num_iters = 50;
